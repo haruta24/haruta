@@ -3,7 +3,7 @@ import { useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
 
-const App = () => {
+const CounterApp = () => {
   /**
    * State
    * count = 状態
@@ -25,8 +25,17 @@ const App = () => {
         <title>{"カウンター"}</title>
       </Head>
       <Box p={4}>
-        <Button colorScheme={"blue"} onClick={onIncrement}>
-          {`${count}回タップしました`}
+        <Button
+          onClick={onIncrement}
+          _hover={{ bg: "gray.300" }}
+          h={"100%"}
+          bg={"gray.200"}
+          rounded={"lg"}
+          h={"100%"}
+          p={4}
+          fontcolor={"black"}
+        >
+          {`${count}回タップしました🥳`}
         </Button>
         <Link href={"/"}>
           <a>{"戻る"}</a>
@@ -36,4 +45,4 @@ const App = () => {
   )
 }
 
-export default App
+export default CounterApp
