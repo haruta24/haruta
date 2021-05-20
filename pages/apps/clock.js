@@ -2,6 +2,7 @@ import { Button, Box, Text, HStack } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
+import { BoxHeader } from "../../components/BoxHeader"
 
 const ClockApp = () => {
   const [date, setDate] = useState(new Date())
@@ -25,6 +26,7 @@ const ClockApp = () => {
       <Head>
         <title>{"時計"}</title>
       </Head>
+      <BoxHeader />
       <Box p={4}>
         <HStack>
           <Text>{date.getHours()}</Text>
@@ -33,9 +35,6 @@ const ClockApp = () => {
           <Text>{":"}</Text>
           <Text>{date.getSeconds()}</Text>
         </HStack>
-        <Link href={"/"}>
-          <a>{"戻る"}</a>
-        </Link>
       </Box>
     </>
   )

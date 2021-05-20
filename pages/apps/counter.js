@@ -2,6 +2,7 @@ import { Button, Box } from "@chakra-ui/react"
 import { useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
+import { BoxHeader } from "../../components/BoxHeader"
 
 const CounterApp = () => {
   /**
@@ -24,6 +25,7 @@ const CounterApp = () => {
       <Head>
         <title>{"カウンター"}</title>
       </Head>
+      <BoxHeader />
       <Box p={4}>
         <Button
           onClick={onIncrement}
@@ -34,12 +36,10 @@ const CounterApp = () => {
           h={"100%"}
           p={4}
           fontcolor={"black"}
+          fontweight={"400"}
         >
           {`${count}回タップしました🥳`}
         </Button>
-        <Link href={"/"}>
-          <a>{"戻る"}</a>
-        </Link>
       </Box>
     </>
   )
