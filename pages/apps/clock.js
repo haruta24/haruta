@@ -1,4 +1,4 @@
-import { Button, Box, Text, HStack, Center } from "@chakra-ui/react"
+import { Button, Box, Text, HStack, Center, fontSize } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -28,7 +28,7 @@ const ClockApp = () => {
       </Head>
       <BoxHeader />
       <Center>
-        <Box px={12} color={"black"}>
+        <Box px={12} color={"black"} fontSize={"30px"}>
           <HStack>
             <Text>{date.getHours()}</Text>
             <Text>{":"}</Text>
