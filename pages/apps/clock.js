@@ -1,4 +1,4 @@
-import { Button, Box, Text, HStack } from "@chakra-ui/react"
+import { Button, Box, Text, HStack, Center } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -27,15 +27,17 @@ const ClockApp = () => {
         <title>{"時計"}</title>
       </Head>
       <BoxHeader />
-      <Box p={4}>
-        <HStack>
-          <Text>{date.getHours()}</Text>
-          <Text>{":"}</Text>
-          <Text>{date.getMinutes()}</Text>
-          <Text>{":"}</Text>
-          <Text>{date.getSeconds()}</Text>
-        </HStack>
-      </Box>
+      <Center>
+        <Box px={12} color={"black"}>
+          <HStack>
+            <Text>{date.getHours()}</Text>
+            <Text>{":"}</Text>
+            <Text>{date.getMinutes()}</Text>
+            <Text>{":"}</Text>
+            <Text>{date.getSeconds()}</Text>
+          </HStack>
+        </Box>
+      </Center>
     </>
   )
 }
