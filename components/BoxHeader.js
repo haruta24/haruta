@@ -9,13 +9,9 @@ import {
   Spinner,
   Center,
   Image,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  onDownIcon,
 } from "@chakra-ui/react"
 import Link from "next/link"
+import { FaTwitter } from "react-icons/fa"
 
 export const BoxHeader = () => {
   return (
@@ -37,14 +33,9 @@ export const BoxHeader = () => {
             {"Haruta.dev"}
           </Heading>
         </HStack>
-        <Menu>
-          <MenuButton as={Button} rightIcon={""}>
-            ログイン
-          </MenuButton>
-          <MenuList>
-            <MenuItem>Twitterでログイン</MenuItem>
-          </MenuList>
-        </Menu>
+        <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
+          Twitterでログイン
+        </Button>
       </HStack>
     </Box>
   )
