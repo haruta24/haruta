@@ -13,6 +13,7 @@ const TextApp = () => {
       <Head>
         <title>{"text"}</title>
       </Head>
+      <BoxHeader />
       <Box p={4}>
         <Textarea
           placeholder={"Here is a sample placeholder"}
