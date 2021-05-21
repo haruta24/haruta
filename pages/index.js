@@ -13,6 +13,7 @@ import {
 import Link from "next/link"
 import { BoxHeader } from "../components/BoxHeader"
 import { BoxCardApp } from "../components/BoxCardApp"
+import { useAnalytics } from "reactfire"
 
 const Home = () => {
   const apps = [
