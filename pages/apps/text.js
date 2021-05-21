@@ -19,7 +19,6 @@ const TextApp = () => {
           placeholder={"Here is a sample placeholder"}
           value={text}
           onChange={(event) => {
-            z
             // 新しい入力
             const nextText = event.target.value
             // 20文字より大きいと更新しない
