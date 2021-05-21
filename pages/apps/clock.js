@@ -28,7 +28,7 @@ const ClockApp = () => {
       </Head>
       <BoxHeader />
       <Center>
-        <Box px={12} color={"black"} fontSize={"30px"}>
+        <Box px={12} color={"black"} fontSize={"50px"}>
           <HStack>
             <Text>{date.getHours()}</Text>
             <Text>{":"}</Text>

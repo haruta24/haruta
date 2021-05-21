@@ -27,6 +27,18 @@ const CounterApp = () => {
       </Head>
       <BoxHeader />
       <Center>
+        <Box
+          rounded={"lg"}
+          h={"100%"}
+          p={4}
+          fontcolor={"black"}
+          fontSize={"50px"}
+          bg-color={"white"}
+        >
+          {`${count}回`}
+        </Box>
+      </Center>
+      <Center>
         <Button
           onClick={onIncrement}
           _hover={{ bg: "gray.300" }}
@@ -37,8 +49,9 @@ const CounterApp = () => {
           fontcolor={"black"}
           fontweight={"400"}
           variant="ghost"
+          outline-color={"gray.300"}
         >
-          {`${count}回タップしました🥳`}
+          {`タップしました🥳`}
         </Button>
       </Center>
     </>
