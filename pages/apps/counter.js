@@ -36,7 +36,7 @@ const CounterApp = () => {
           h={"100%"}
           p={4}
           fontcolor={"black"}
-          fontweight={"400"}
+          fontWeight={"400"}
         >
           {`${count}回タップしました🥳`}
         </Button>
