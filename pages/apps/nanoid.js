@@ -15,9 +15,8 @@ const NanoidApp = ({ initialId }) => {
         <title>{"Nano ID"}</title>
       </Head>
       <BoxHeader />
-
       <Center>
-        <Text>{id}</Text>
+        <Text fontSize={"50px"}>{id}</Text>
         <Button
           onClick={() => {
             setId(nanoid())
