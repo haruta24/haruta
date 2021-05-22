@@ -32,8 +32,8 @@ export const BoxHeader = () => {
               <Image
                 src={"/icon.svg"}
                 alt={"Segun Adebayo"}
-                w={12}
-                h={12}
+                w={10}
+                h={10}
                 ignoreFallback={true}
               />
             </a>

@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
       <BoxHeader />
-      <Stack as={"main"} p={4} spacing={100}>
+      <Stack as={"main"} px={4} pb={4} spacing={4}>
         <SimpleGrid minChildWidth={"350px"} spacing={4}>
           {apps.map((app) => (
             <Link href={app.href} key={app.href}>
