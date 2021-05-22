@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaTwitter } from "react-icons/fa"
-
+import { ButtonLogin } from "./ButtonLogin"
 import { getAuth, signInWithPopup, TwitterAuthProvider } from "firebase/auth"
 
 export const BoxHeader = () => {
@@ -42,17 +42,7 @@ export const BoxHeader = () => {
             {"Haruta.dev"}
           </Heading>
         </HStack>
-        <Button
-          colorScheme={"twitter"}
-          onClick={() => {
-            const auth = getAuth()
-            const provider = new TwitterAuthProvider()
-            signInWithPopup(auth, provider)
-          }}
-          leftIcon={<FaTwitter />}
-        >
-          {"Twitterでログイン"}
-        </Button>
+        <ButtonLogin />
       </HStack>
     </Box>
   )

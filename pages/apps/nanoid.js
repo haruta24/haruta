@@ -16,7 +16,7 @@ const NanoidApp = ({ initialId }) => {
       </Head>
       <BoxHeader />
       <Center>
-        <Text fontSize={"50px"}>{id}</Text>
+        <Text fontSize={"45px"}>{id}</Text>
         <Button
           onClick={() => {
             setId(nanoid())
