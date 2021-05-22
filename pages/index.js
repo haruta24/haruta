@@ -32,6 +32,12 @@ const Home = () => {
       title: "入力",
       description: "文字を入力する",
     },
+
+    {
+      href: "/apps/nanoid",
+      title: "NaN0-1D",
+      description: "nanoidを表示する",
+    },
   ]
 
   return (
