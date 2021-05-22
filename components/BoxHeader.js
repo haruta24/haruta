@@ -20,6 +20,8 @@ import {
 import Link from "next/link"
 import { FaTwitter } from "react-icons/fa"
 
+import { getAuth, signInWithPopup, TwitterAuthProvider } from "firebase/auth"
+
 export const BoxHeader = () => {
   return (
     <Box p={4}>
@@ -40,8 +42,16 @@ export const BoxHeader = () => {
             {"Haruta.dev"}
           </Heading>
         </HStack>
-        <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
-          Twitterでログイン
+        <Button
+          colorScheme={"twitter"}
+          onClick={() => {
+            const auth = getAuth()
+            const provider = new TwitterAuthProvider()
+            signInWithPopup(auth, provider)
+          }}
+          leftIcon={<FaTwitter />}
+        >
+          {"Twitterでログイン"}
         </Button>
       </HStack>
     </Box>
