@@ -26,7 +26,6 @@ const ClockApp = () => {
       <Head>
         <title>{"時計"}</title>
       </Head>
-      <BoxHeader />
       <Center>
         <Box px={12} color={"black"} fontSize={"50px"}>
           <HStack>

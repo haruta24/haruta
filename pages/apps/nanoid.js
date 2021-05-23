@@ -14,7 +14,6 @@ const NanoidApp = ({ initialId }) => {
       <Head>
         <title>{"Nano ID"}</title>
       </Head>
-      <BoxHeader />
       <Center>
         <Text fontSize={"45px"}>{id}</Text>
         <Button

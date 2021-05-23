@@ -1,15 +1,4 @@
-import {
-  Box,
-  Text,
-  Heading,
-  Stack,
-  HStack,
-  Button,
-  SimpleGrid,
-  Spinner,
-  Center,
-  Image,
-} from "@chakra-ui/react"
+import { Box, Text, Stack } from "@chakra-ui/react"
 
 export const BoxCardApp = (props) => {
   return (

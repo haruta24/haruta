@@ -13,7 +13,6 @@
     "@emotion/styled": "^11",
     "firebase": "9.0.0-beta.1",
     "framer-motion": "^4",
-    "nanoid": "^3.1.23",
     "next": "10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -21,6 +20,7 @@
     "reactfire": "^3.0.0-rc.0"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "prettier-plugin-organize-imports": "^2.1.0"
   }
 }

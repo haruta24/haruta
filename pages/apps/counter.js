@@ -25,7 +25,6 @@ const CounterApp = () => {
       <Head>
         <title>{"カウンター"}</title>
       </Head>
-      <BoxHeader />
       <Box p={4}>
         <Button
           onClick={onIncrement}

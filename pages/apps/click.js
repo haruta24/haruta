@@ -28,7 +28,6 @@ const CounterApp = () => {
       <BoxHeader />
       <Center>
         <Box
-          rounded={"lg"}
           h={"100%"}
           p={4}
           fontcolor={"black"}

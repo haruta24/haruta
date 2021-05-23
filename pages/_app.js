@@ -4,7 +4,11 @@ import { useEffect } from "react"
 import { getAnalytics, logEvent, setCurrentScreen } from "firebase/analytics"
 import { getApps, initializeApp } from "firebase/app"
 import { useRouter } from "next/router"
+import { BoxHeader } from "../components/BoxHeader"
 
+/**
+ * https://nextjs.org/docs/advanced-features/custom-app
+ */
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
 
@@ -42,8 +46,13 @@ const MyApp = ({ Component, pageProps }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  /**
+   * 全部のページに表示される
+   * appに書いたらclick.js chonter.jsに<BoxHeader>書かなくていい
+   */
   return (
     <ChakraProvider>
+      <BoxHeader />
       <Component {...pageProps} />
     </ChakraProvider>
   )

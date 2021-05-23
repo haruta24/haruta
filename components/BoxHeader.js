@@ -1,22 +1,4 @@
-import {
-  Box,
-  Text,
-  Heading,
-  Stack,
-  HStack,
-  Button,
-  SimpleGrid,
-  Spinner,
-  Center,
-  Image,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/react"
+import { Box, Heading, HStack, Image } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaTwitter } from "react-icons/fa"
 import { ButtonLogin } from "./ButtonLogin"

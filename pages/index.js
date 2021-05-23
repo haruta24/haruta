@@ -14,6 +14,7 @@ import Link from "next/link"
 import { BoxHeader } from "../components/BoxHeader"
 import { BoxCardApp } from "../components/BoxCardApp"
 import { useAnalytics } from "reactfire"
+import Head from "next/head"
 
 const Home = () => {
   const apps = [
@@ -42,7 +43,9 @@ const Home = () => {
 
   return (
     <>
-      <BoxHeader />
+      <Head>
+        <title>{"はるた"}</title>
+      </Head>
       <Stack as={"main"} px={4} pb={4} spacing={4}>
         <SimpleGrid minChildWidth={"350px"} spacing={4}>
           {apps.map((app) => (
