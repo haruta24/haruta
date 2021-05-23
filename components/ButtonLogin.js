@@ -8,6 +8,7 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react"
 import Link from "next/link"
 import { FaTwitter } from "react-icons/fa"
@@ -15,14 +16,26 @@ import { getAuth, signInWithPopup, TwitterAuthProvider } from "firebase/auth"
 
 export const ButtonLogin = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const toast = useToast()
 
   const onLogin = async () => {
     try {
       const auth = getAuth()
       const provider = new TwitterAuthProvider()
-      await signInWithPopup(auth, provider)
+      const result = await signInWithPopup(auth, provider)
+      console.log(result)
+      toast({
+        title: "Account created.",
+        description: "We've created your account for you.",
+        status: "success",
+
+      })
     } catch (error) {
       console.error(error)
+      toast({
+        title: "失敗しました",
+        status: "error",
+      })
     }
   }
 

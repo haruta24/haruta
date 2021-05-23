@@ -25,7 +25,6 @@ const CounterApp = () => {
       <Head>
         <title>{"カウンター"}</title>
       </Head>
-      <BoxHeader />
       <Center>
         <Box
           h={"100%"}

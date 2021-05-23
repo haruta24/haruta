@@ -1,14 +1,6 @@
 import {
-  Box,
-  Text,
-  Heading,
   Stack,
-  HStack,
-  Button,
   SimpleGrid,
-  Spinner,
-  Center,
-  Image,
 } from "@chakra-ui/react"
 import Link from "next/link"
 import { BoxHeader } from "../components/BoxHeader"

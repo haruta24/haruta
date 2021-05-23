@@ -1,4 +1,4 @@
-import { Button, Box, Center, variant, Text } from "@chakra-ui/react"
+import { Button, Box, Center, variant, Text, HStack} from "@chakra-ui/react"
 import { useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -14,8 +14,8 @@ const NanoidApp = ({ initialId }) => {
       <Head>
         <title>{"Nano ID"}</title>
       </Head>
-      <Center>
-        <Text fontSize={"45px"}>{id}</Text>
+      <HStack justify={'center'} spacing={4}>
+        <Text fontSize={"md"}>{id}</Text>
         <Button
           onClick={() => {
             setId(nanoid())
@@ -23,7 +23,7 @@ const NanoidApp = ({ initialId }) => {
         >
           {"更新"}
         </Button>
-      </Center>
+      </HStack>
     </>
   )
 }
