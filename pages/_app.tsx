@@ -1,15 +1,15 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import { FirebaseAppProvider } from "reactfire"
-import { useEffect } from "react"
 import { getAnalytics, logEvent, setCurrentScreen } from "firebase/analytics"
 import { getApps, initializeApp } from "firebase/app"
+import { AppProps } from "next/app"
 import { useRouter } from "next/router"
+import { FunctionComponent, useEffect } from "react"
 import { BoxHeader } from "../components/BoxHeader"
 
 /**
  * https://nextjs.org/docs/advanced-features/custom-app
  */
-const MyApp = ({ Component, pageProps }) => {
+const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
 
   if (typeof window !== "undefined") {

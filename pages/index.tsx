@@ -1,12 +1,7 @@
-import {
-  Stack,
-  SimpleGrid,
-} from "@chakra-ui/react"
-import Link from "next/link"
-import { BoxHeader } from "../components/BoxHeader"
-import { BoxCardApp } from "../components/BoxCardApp"
-import { useAnalytics } from "reactfire"
+import { SimpleGrid, Stack } from "@chakra-ui/react"
 import Head from "next/head"
+import Link from "next/link"
+import { BoxCardApp } from "../components/BoxCardApp"
 
 const Home = () => {
   const apps = [
@@ -25,7 +20,6 @@ const Home = () => {
       title: "入力",
       description: "文字を入力する",
     },
-
     {
       href: "/apps/nanoid",
       title: "NaN0-1D",

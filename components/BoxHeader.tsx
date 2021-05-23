@@ -1,10 +1,9 @@
 import { Box, Heading, HStack, Image } from "@chakra-ui/react"
 import Link from "next/link"
-import { FaTwitter } from "react-icons/fa"
+import { FunctionComponent } from "react"
 import { ButtonLogin } from "./ButtonLogin"
-import { getAuth, signInWithPopup, TwitterAuthProvider } from "firebase/auth"
 
-export const BoxHeader = () => {
+export const BoxHeader: FunctionComponent = () => {
   return (
     <Box p={4}>
       <HStack justify={"space-between"} align={"center"}>

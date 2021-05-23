@@ -1,11 +1,8 @@
-import {  Box, Text,  } from "@chakra-ui/react"
-import { useEffect, useState } from "react"
+import { Box, Text, Textarea } from "@chakra-ui/react"
 import Head from "next/head"
-import Link from "next/link"
-import { BoxHeader } from "../../components/BoxHeader"
-import { Textarea } from "@chakra-ui/react"
+import { FunctionComponent, useState } from "react"
 
-const TextApp = () => {
+const TextApp: FunctionComponent = () => {
   const [text, setText] = useState("")
 
   return (

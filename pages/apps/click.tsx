@@ -1,10 +1,8 @@
-import { Button, Box, Center, variant } from "@chakra-ui/react"
-import { useState } from "react"
+import { Box, Button, Center } from "@chakra-ui/react"
 import Head from "next/head"
-import Link from "next/link"
-import { BoxHeader } from "../../components/BoxHeader"
+import { FunctionComponent, useState } from "react"
 
-const CounterApp = () => {
+const CounterApp: FunctionComponent = () => {
   /**
    * State
    * count = 状態
@@ -42,7 +40,6 @@ const CounterApp = () => {
           _hover={{ bg: "gray.300" }}
           h={"100%"}
           rounded={"lg"}
-          h={"100%"}
           p={4}
           fontcolor={"black"}
           fontweight={"400"}

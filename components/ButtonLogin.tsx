@@ -1,20 +1,20 @@
 import {
   Button,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   useDisclosure,
   useToast,
 } from "@chakra-ui/react"
-import Link from "next/link"
-import { FaTwitter } from "react-icons/fa"
 import { getAuth, signInWithPopup, TwitterAuthProvider } from "firebase/auth"
+import { FunctionComponent } from "react"
+import { FaTwitter } from "react-icons/fa"
 
-export const ButtonLogin = () => {
+export const ButtonLogin: FunctionComponent = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const toast = useToast()
 
@@ -28,7 +28,6 @@ export const ButtonLogin = () => {
         title: "Account created.",
         description: "We've created your account for you.",
         status: "success",
-
       })
     } catch (error) {
       console.error(error)

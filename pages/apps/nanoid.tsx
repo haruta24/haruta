@@ -1,20 +1,21 @@
-import { Button, Box, Center, variant, Text, HStack} from "@chakra-ui/react"
-import { useState } from "react"
-import Head from "next/head"
-import Link from "next/link"
-import { BoxHeader } from "../../components/BoxHeader"
+import { Button, HStack, Text } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
+import { GetServerSideProps } from "next"
+import Head from "next/head"
+import { FunctionComponent, useState } from "react"
 
-const NanoidApp = ({ initialId }) => {
+type Props = { initialId: string }
+
+const NanoidApp: FunctionComponent<Props> = (props) => {
   // initialIdはサーバーサイドで生成されたID
-  const [id, setId] = useState(initialId)
+  const [id, setId] = useState(props.initialId)
 
   return (
     <>
       <Head>
         <title>{"Nano ID"}</title>
       </Head>
-      <HStack justify={'center'} spacing={4}>
+      <HStack justify={"center"} spacing={4}>
         <Text fontSize={"md"}>{id}</Text>
         <Button
           onClick={() => {
@@ -32,10 +33,9 @@ const NanoidApp = ({ initialId }) => {
  * サーバーサイド
  * https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
  */
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   // IDをつくる
   const initialId = nanoid()
-
   // クライアントサイドにデータ（initialId）を送る
   return {
     props: { initialId },
