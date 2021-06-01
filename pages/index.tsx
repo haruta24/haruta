@@ -27,7 +27,7 @@ const Home = () => {
     },
     {
       href: "/apps/aaa",
-      title: "間違い探し",
+      title: "間違い探ししし",
       description: "違う漢字を見つける",
     },
   ]
