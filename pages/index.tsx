@@ -30,6 +30,11 @@ const Home = () => {
       title: "間違い探し",
       description: "違う漢字を見つける",
     },
+    {
+      href: "/apps/dice",
+      title: "サイコロ",
+      description: "サイコロを振る",
+    },
   ]
 
   return (

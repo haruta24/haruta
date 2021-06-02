@@ -1,4 +1,4 @@
-import { Box, Button, Grid, HStack } from "@chakra-ui/react"
+import { Box, Button, Center, Grid, HStack } from "@chakra-ui/react"
 import Head from "next/head"
 import React, { FunctionComponent, useState } from "react"
 
@@ -31,6 +31,9 @@ const AaaApp: FunctionComponent = () => {
       <Head>
         <title>{"text"}</title>
       </Head>
+      <Center>
+        <text>{"待を見つける"}</text>
+      </Center>
       <HStack justify={"center"}>
         <Box w={"md"} h={"md"}>
           <Grid templateColumns="repeat(8, 1fr)" gap={2} h={"100%"}>
