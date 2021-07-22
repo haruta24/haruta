@@ -9,7 +9,7 @@ const AaaApp: FunctionComponent = () => {
   /**
    * 文字列を文字の配列にする
    * join　配列の全ての要素をくっ付けた文字列を返す
-   * split 文字列の配列に分割
+   * split 文字列の配列に分割app
    */
   const texts: string[] = new Array(65)
     .join("侍")
