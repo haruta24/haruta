@@ -38,7 +38,7 @@ const Home = () => {
     {
       href: "/apps/vocaloid",
       title: "ボカロ",
-      description: "好きな曲",
+      description: "🎧",
     },
   ]
 
