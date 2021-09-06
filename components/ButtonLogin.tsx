@@ -46,7 +46,7 @@ export const ButtonLogin: FunctionComponent = () => {
         <ModalContent>
           <ModalHeader>{""}</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>{"途中です"}</ModalBody>
+          <ModalBody>{"こんにちは"}</ModalBody>
           <ModalFooter>
             <Button
               w={"100%"}

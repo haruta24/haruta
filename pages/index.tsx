@@ -35,6 +35,11 @@ const Home = () => {
       title: "サイコロ",
       description: "サイコロを振る",
     },
+    {
+      href: "/apps/vocaloid",
+      title: "ボカロ",
+      description: "好きな曲",
+    },
   ]
 
   return (
