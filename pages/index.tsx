@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>{"はるた"}</title>
+        <title>{"ハルタ"}</title>
       </Head>
       <Stack as={"main"} px={4} pb={4} spacing={4}>
         <SimpleGrid minChildWidth={"350px"} spacing={4}>

@@ -25,7 +25,7 @@ const ClockApp: FunctionComponent = () => {
         <title>{"時計"}</title>
       </Head>
       <Center>
-        <Box px={12} color={"black"} fontSize={"lg"}>
+        <Box px={12} color={"black"} fontSize={"7xl"}>
           <HStack>
             <Text>{date.getHours()}</Text>
             <Text>{":"}</Text>
