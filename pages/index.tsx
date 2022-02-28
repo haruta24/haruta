@@ -40,6 +40,11 @@ const Home = () => {
       title: "ボカロ",
       description: "🎧",
     },
+    {
+      href: "/apps/min2sec",
+      title: "分から秒",
+      description: "",
+    },
   ]
 
   return (
@@ -47,7 +52,7 @@ const Home = () => {
       <Head>
         <title>{"ハルタ"}</title>
       </Head>
-      <Stack as={"main"} px={4} pb={4} spacing={4} color={"#86cecb"}>
+      <Stack as={"main"} px={4} pb={4} spacing={4} color={"black"}>
         <SimpleGrid minChildWidth={"350px"} spacing={4}>
           {apps.map((app) => (
             <Link href={app.href} key={app.href}>

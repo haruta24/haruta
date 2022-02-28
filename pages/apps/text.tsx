@@ -12,7 +12,7 @@ const TextApp: FunctionComponent = () => {
       </Head>
       <Box p={4}>
         <Textarea
-          placeholder={"Here is a sample placeholder"}
+          placeholder={"ここに文字を入力"}
           value={text}
           onChange={(event) => {
             // 新しい入力
