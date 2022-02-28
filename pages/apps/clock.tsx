@@ -5,6 +5,9 @@ import { FunctionComponent, useEffect, useState } from "react"
 const ClockApp: FunctionComponent = () => {
   const [date, setDate] = useState(new Date())
 
+  // useEffectの引数数える
+  // useEffectの第一引数の返り値
+
   useEffect(() => {
     /**
      * 毎秒実行される

@@ -47,7 +47,7 @@ const Home = () => {
       <Head>
         <title>{"ハルタ"}</title>
       </Head>
-      <Stack as={"main"} px={4} pb={4} spacing={4}>
+      <Stack as={"main"} px={4} pb={4} spacing={4} color={"#86cecb"}>
         <SimpleGrid minChildWidth={"350px"} spacing={4}>
           {apps.map((app) => (
             <Link href={app.href} key={app.href}>
