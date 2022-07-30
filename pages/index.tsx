@@ -45,6 +45,11 @@ const Home = () => {
       title: "分から秒",
       description: "",
     },
+    {
+      href: "/apps/caculator",
+      title: "電卓",
+      description: "数字の計算ができる",
+    },
   ]
 
   return (
