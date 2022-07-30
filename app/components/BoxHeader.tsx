@@ -1,7 +1,7 @@
 import { Box, Heading, HStack, Image } from "@chakra-ui/react"
 import Link from "next/link"
 import { FunctionComponent } from "react"
-import { ButtonLogin } from "./ButtonLogin"
+import { ButtonDarkMode } from "./ButtonDarkMode"
 
 export const BoxHeader: FunctionComponent = () => {
   return (
@@ -23,7 +23,7 @@ export const BoxHeader: FunctionComponent = () => {
             {"Haruta.dev"}
           </Heading>
         </HStack>
-        <ButtonLogin />
+        <ButtonDarkMode />
       </HStack>
     </Box>
   )
