@@ -1,3 +1,4 @@
+import { HStack, Stack } from "@chakra-ui/react"
 import { FC, useState } from "react"
 import ButtonPanel from "../../app/component/ButtonPanel"
 import Display from "../../app/component/Display"
@@ -15,10 +16,12 @@ const PageAppCaculator: FC = () => {
     setState(nextState)
   }
   return (
-    <div>
-      <Display value={state.current} />
-      <ButtonPanel buttonHandler={buttonHandler} />
-    </div>
+    <HStack justifyContent={"center"} pt={8}>
+      <Stack maxW={"min-content"}>
+        <Display value={state.current} />
+        <ButtonPanel buttonHandler={buttonHandler} />
+      </Stack>
+    </HStack>
   )
 }
 
