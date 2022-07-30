@@ -1,7 +1,7 @@
 import { SimpleGrid, Stack } from "@chakra-ui/react"
 import Head from "next/head"
 import Link from "next/link"
-import { BoxCardApp } from "../components/BoxCardApp"
+import { BoxCardApp } from "../app/components/BoxCardApp"
 
 const Home = () => {
   const apps = [

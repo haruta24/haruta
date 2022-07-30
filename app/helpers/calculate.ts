@@ -1,35 +1,35 @@
-export default function calculate(button: string, state: State): State {
+export const calculate = (button: string, state: State): State => {
   if (isNumberButton(button)) {
-    return handleNumberButton(button, state);
+    return handleNumberButton(button, state)
   }
 
   if (isOperatorButton(button)) {
-    return handleOperatorButton(button, state);
+    return handleOperatorButton(button, state)
   }
 
   if (isDotButton(button)) {
-    return handleDotButton(state);
+    return handleDotButton(state)
   }
 
   if (isDeleteButton(button)) {
-    return handleDeleteButton(state);
+    return handleDeleteButton(state)
   }
 
   if (isAllClearButton(button)) {
-    return handleAllClearButton();
+    return handleAllClearButton()
   }
 
   if (isEqualButton(button)) {
-    return handleEqualButton(state);
+    return handleEqualButton(state)
   }
-  return state;
+  return state
 }
 
 export interface State {
-  current: string;
-  operand: number;
-  operator: string | null;
-  isNextClear: boolean;
+  current: string
+  operand: number
+  operator: string | null
+  isNextClear: boolean
 }
 
 function isNumberButton(button: string) {
@@ -44,7 +44,7 @@ function isNumberButton(button: string) {
     button === "7" ||
     button === "8" ||
     button === "9"
-  );
+  )
 }
 function handleNumberButton(button: string, state: State): State {
   if (state.isNextClear) {
@@ -53,7 +53,7 @@ function handleNumberButton(button: string, state: State): State {
       operand: state.operand,
       operator: state.operator,
       isNextClear: false,
-    };
+    }
   }
   if (state.current === "0") {
     return {
@@ -61,17 +61,17 @@ function handleNumberButton(button: string, state: State): State {
       operand: state.operand,
       operator: state.operator,
       isNextClear: false,
-    };
+    }
   }
   return {
     current: state.current + button,
     operand: state.operand,
     operator: state.operator,
     isNextClear: false,
-  };
+  }
 }
 function isOperatorButton(button: string) {
-  return button === "+" || button === "-";
+  return button === "+" || button === "-"
 }
 function handleOperatorButton(button: string, state: State): State {
   if (state.operator === null) {
@@ -80,32 +80,32 @@ function handleOperatorButton(button: string, state: State): State {
       operand: parseFloat(state.current),
       operator: button,
       isNextClear: true,
-    };
+    }
   }
-  const nextValue = operate(state);
+  const nextValue = operate(state)
   return {
     current: `${nextValue}`,
     operand: nextValue,
     operator: button,
     isNextClear: true,
-  };
+  }
 }
 function isDotButton(button: string) {
-  return button === ".";
+  return button === "."
 }
 function handleDotButton(state: State): State {
   if (state.current.indexOf(".") !== -1) {
-    return state;
+    return state
   }
   return {
     current: state.current + ".",
     operand: state.operand,
     operator: state.operator,
     isNextClear: false,
-  };
+  }
 }
 function isDeleteButton(button: string) {
-  return button === "D";
+  return button === "D"
 }
 function handleDeleteButton(state: State): State {
   if (state.current.length === 1) {
@@ -114,17 +114,17 @@ function handleDeleteButton(state: State): State {
       operand: state.operand,
       operator: state.operator,
       isNextClear: false,
-    };
+    }
   }
   return {
     current: state.current.substring(0, state.current.length - 1),
     operand: state.operand,
     operator: state.operator,
     isNextClear: false,
-  };
+  }
 }
 function isAllClearButton(button: string) {
-  return button === "AC";
+  return button === "AC"
 }
 function handleAllClearButton(): State {
   return {
@@ -132,30 +132,30 @@ function handleAllClearButton(): State {
     operand: 0,
     operator: null,
     isNextClear: false,
-  };
+  }
 }
 function isEqualButton(button: string) {
-  return button === "=";
+  return button === "="
 }
 function handleEqualButton(state: State): State {
   if (state.operator === null) {
-    return state;
+    return state
   }
-  const nextValue = operate(state);
+  const nextValue = operate(state)
   return {
     current: `${nextValue}`,
     operand: 0,
     operator: null,
     isNextClear: true,
-  };
+  }
 }
 function operate(state: State): number {
-  const current = parseFloat(state.current);
+  const current = parseFloat(state.current)
   if (state.operator === "+") {
-    return state.operand + current;
+    return state.operand + current
   }
   if (state.operator === "-") {
-    return state.operand - current;
+    return state.operand - current
   }
-  return current;
+  return current
 }

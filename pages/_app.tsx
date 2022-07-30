@@ -4,7 +4,7 @@ import { getApps, initializeApp } from "firebase/app"
 import { AppProps } from "next/app"
 import { useRouter } from "next/router"
 import { FunctionComponent, useEffect } from "react"
-import { BoxHeader } from "../components/BoxHeader"
+import { BoxHeader } from "../app/components/BoxHeader"
 
 /**
  * https://nextjs.org/docs/advanced-features/custom-app

@@ -1,8 +1,11 @@
 import { Button, HStack, Stack } from "@chakra-ui/react"
+import { FC } from "react"
 
-export default function ButtonPanel(props: {
+type Props = {
   buttonHandler: (code: string) => void
-}) {
+}
+
+export const ButtonPanel: FC<Props> = (props) => {
   return (
     <Stack>
       <HStack>
