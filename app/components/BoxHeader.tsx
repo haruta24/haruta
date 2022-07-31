@@ -7,9 +7,9 @@ export const BoxHeader: FunctionComponent = () => {
   return (
     <Box p={4}>
       <HStack justify={"space-between"} align={"center"}>
-        <HStack>
-          <Link href={"/"}>
-            <a>
+        <Link href={"/"}>
+          <a>
+            <HStack>
               <Image
                 src={"/icon.svg"}
                 alt={"Segun Adebayo"}
@@ -17,12 +17,13 @@ export const BoxHeader: FunctionComponent = () => {
                 h={10}
                 ignoreFallback={true}
               />
-            </a>
-          </Link>
-          <Heading fontSize={"lg"} letterSpacing={"1px"}>
-            {"Haruta.dev"}
-          </Heading>
-        </HStack>
+
+              <Heading fontSize={"lg"} letterSpacing={"1px"}>
+                {"Haruta.dev"}
+              </Heading>
+            </HStack>
+          </a>
+        </Link>
         <ButtonDarkMode />
       </HStack>
     </Box>

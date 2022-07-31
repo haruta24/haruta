@@ -1,4 +1,4 @@
-import { Box, Button, Center, Grid, HStack } from "@chakra-ui/react"
+import { Box, Button, Center, Grid, HStack, Stack } from "@chakra-ui/react"
 import Head from "next/head"
 import { confetti, variation } from "party-js"
 import React, { FunctionComponent, useState } from "react"
@@ -43,29 +43,31 @@ const AaaApp: FunctionComponent = () => {
       <Head>
         <title>{"text"}</title>
       </Head>
-      <Center>
-        <text>{`${second}を見つける`}</text>
-      </Center>
-      <HStack justify={"center"} p={2}>
-        <Box w={"md"} h={"md"}>
-          <Grid templateColumns="repeat(8, 1fr)" gap={2} h={"100%"}>
-            {texts.map((text, index) => (
-              <Button
-                key={index}
-                h={"100%"}
-                onClick={(event) => {
-                  if (index !== answerIndex) return
-                  confetti(event.currentTarget, {
-                    count: variation.range(20, 40),
-                  })
-                }}
-              >
-                {text}
-              </Button>
-            ))}
-          </Grid>
-        </Box>
-      </HStack>
+      <Stack spacing={4}>
+        <Center>
+          <text>{`${second}を見つける`}</text>
+        </Center>
+        <HStack justify={"center"} p={2}>
+          <Box w={"100%"} maxW={"md"} h={"md"}>
+            <Grid templateColumns="repeat(8, 1fr)" gap={1} h={"100%"}>
+              {texts.map((text, index) => (
+                <Button
+                  key={index}
+                  h={"100%"}
+                  onClick={(event) => {
+                    if (index !== answerIndex) return
+                    confetti(event.currentTarget, {
+                      count: variation.range(20, 40),
+                    })
+                  }}
+                >
+                  {text}
+                </Button>
+              ))}
+            </Grid>
+          </Box>
+        </HStack>
+      </Stack>
     </>
   )
 }
