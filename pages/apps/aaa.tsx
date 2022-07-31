@@ -5,27 +5,26 @@ import React, { FunctionComponent, useState } from "react"
 
 // ReactがAaaAppを呼び出している
 const AaaApp: FunctionComponent = () => {
-  const [answer, setAnswer] = useState(38)
+  const [answer, setAnswer] = useState(() => {
+    return Math.floor(Math.random() * 64)
+  })
 
   /**
    * 文字列を文字の配列にする
    * join　配列の全ての要素をくっ付けた文字列を返す
    * split 文字列の配列に分割app
    */
-  const texts: string[] = new Array(65)
-    .join("侍")
-    .split("")
+  const texts: string[] = new Array(64).fill(null).map((text, index) => {
     /**
      * 「テキスト」「番数」を受け取って
      * もし「番数」が「41」なら「お」を返す
      * そうではないなら「あ」を返す
      */
-    .map((text, index) => {
-      if (index === answer) {
-        return "待"
-      }
-      return text
-    })
+    if (index === answer) {
+      return "待"
+    }
+    return "侍"
+  })
 
   return (
     <>
