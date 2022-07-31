@@ -5,9 +5,21 @@ import React, { FunctionComponent, useState } from "react"
 
 // ReactがAaaAppを呼び出している
 const AaaApp: FunctionComponent = () => {
-  const [answer, setAnswer] = useState(() => {
+  const patterns = [
+    ["侍", "待"],
+    ["ね", "れ"],
+    ["め", "ぬ"],
+  ]
+
+  const [pattern, setPattern] = useState(() => {
+    return patterns[Math.floor(Math.random() * patterns.length)]
+  })
+
+  const [answerIndex, setAnswerIndex] = useState(() => {
     return Math.floor(Math.random() * 64)
   })
+
+  const [first, second] = pattern
 
   /**
    * 文字列を文字の配列にする
@@ -20,10 +32,10 @@ const AaaApp: FunctionComponent = () => {
      * もし「番数」が「41」なら「お」を返す
      * そうではないなら「あ」を返す
      */
-    if (index === answer) {
-      return "待"
+    if (index === answerIndex) {
+      return second
     }
-    return "侍"
+    return first
   })
 
   return (
@@ -32,9 +44,9 @@ const AaaApp: FunctionComponent = () => {
         <title>{"text"}</title>
       </Head>
       <Center>
-        <text>{"待を見つける"}</text>
+        <text>{`${second}を見つける`}</text>
       </Center>
-      <HStack justify={"center"}>
+      <HStack justify={"center"} p={2}>
         <Box w={"md"} h={"md"}>
           <Grid templateColumns="repeat(8, 1fr)" gap={2} h={"100%"}>
             {texts.map((text, index) => (
@@ -42,7 +54,7 @@ const AaaApp: FunctionComponent = () => {
                 key={index}
                 h={"100%"}
                 onClick={(event) => {
-                  if (index !== answer) return
+                  if (index !== answerIndex) return
                   confetti(event.currentTarget, {
                     count: variation.range(20, 40),
                   })
