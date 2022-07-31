@@ -41,7 +41,7 @@ const AaaApp: FunctionComponent = () => {
   return (
     <>
       <Head>
-        <title>{"text"}</title>
+        <title>{"間違い探し"}</title>
       </Head>
       <Stack spacing={4}>
         <Center>
