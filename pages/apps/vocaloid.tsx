@@ -20,7 +20,7 @@ const VocaloidApp: FunctionComponent = () => {
             <Text fontSize={"70px"} color={"#86cecb"}>
               {"ボカロ"}
             </Text>
-            <Image boxSize={"70px"} src={"/みく.jpeg"}></Image>
+            <Image alt={"みく"} boxSize={"70px"} src={"/みく.jpeg"}></Image>
           </HStack>
           <Center>
             <UnorderedList>

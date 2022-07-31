@@ -44,11 +44,7 @@ export const ButtonPanel: FC<Props> = (props) => {
         <Button height={10} width={10} onClick={() => props.buttonHandler("1")}>
           1
         </Button>
-        <Button
-          height={10}
-          width={10}
-          conClick={() => props.buttonHandler("2")}
-        >
+        <Button height={10} width={10} onClick={() => props.buttonHandler("2")}>
           2
         </Button>
         <Button

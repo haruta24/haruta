@@ -1,5 +1,5 @@
 import { Box, Button, HStack, Text } from "@chakra-ui/react"
-import Head from "next/dist/next-server/lib/head"
+import Head from "next/head"
 import React, { FunctionComponent, useState } from "react"
 
 const DiceApp: FunctionComponent = () => {
@@ -18,13 +18,7 @@ const DiceApp: FunctionComponent = () => {
       </Head>
       <HStack justify={"center"} spacing={4}>
         {dice !== 0 && (
-          <Box
-            h={"100%"}
-            p={4}
-            fontcolor={"black"}
-            fontSize={"md"}
-            borderWidth={1}
-          >
+          <Box h={"100%"} p={4} fontSize={"md"} borderWidth={1}>
             <Text color={"red"}>{`${dice}`}</Text>
           </Box>
         )}

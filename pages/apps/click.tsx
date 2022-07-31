@@ -24,13 +24,7 @@ const CounterApp: FunctionComponent = () => {
         <title>{"カウンター"}</title>
       </Head>
       <Center>
-        <Box
-          h={"100%"}
-          p={4}
-          fontcolor={"black"}
-          fontSize={"50px"}
-          bg-color={"white"}
-        >
+        <Box h={"100%"} p={4} fontSize={"50px"} bg-color={"white"}>
           {`${count}回`}
         </Box>
       </Center>
@@ -41,8 +35,6 @@ const CounterApp: FunctionComponent = () => {
           h={"100%"}
           rounded={"lg"}
           p={4}
-          fontcolor={"black"}
-          fontweight={"400"}
           variant="ghost"
           outline-color={"gray.300"}
         >

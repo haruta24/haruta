@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react"
-import { getAnalytics, logEvent, setCurrentScreen } from "firebase/analytics"
+import { getAnalytics, logEvent } from "firebase/analytics"
 import { getApps, initializeApp } from "firebase/app"
 import { AppProps } from "next/app"
 import { useRouter } from "next/router"
@@ -30,19 +30,19 @@ const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
 
   useEffect(() => {
     if (typeof window === "undefined") return
-
     if (process.env.NODE_ENV !== "production") return
-
-    const analytics = getAnalytics()
-
     router.events.on("routeChangeComplete", (url) => {
-      setCurrentScreen(analytics, url)
-      logEvent(analytics, "screen_view")
+      logEvent(getAnalytics(), "page_view", {
+        page_location: document.title,
+        page_path: window.location.href,
+        page_title: window.location.pathname,
+      })
     })
-
-    setCurrentScreen(analytics, window.location.pathname)
-
-    logEvent(analytics, "screen_view")
+    logEvent(getAnalytics(), "page_view", {
+      page_location: document.title,
+      page_path: window.location.href,
+      page_title: window.location.pathname,
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
