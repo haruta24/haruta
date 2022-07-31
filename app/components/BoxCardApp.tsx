@@ -1,9 +1,9 @@
-import { Box, Text, Stack } from "@chakra-ui/react"
+import { Button, Stack, Text } from "@chakra-ui/react"
 import { FunctionComponent } from "react"
 
 type Props = {
   title: string
-  description: string
+  emoji: string
 }
 
 /**
@@ -14,17 +14,15 @@ type Props = {
  */
 export const BoxCardApp: FunctionComponent<Props> = (props) => {
   return (
-    <Box
-      _hover={{ bg: "gray.300" }}
-      h={"100%"}
-      bg={"gray.200"}
-      rounded={"lg"}
-      p={4}
-    >
-      <Stack spacing={0}>
-        <Text align={"center"}>{props.title}</Text>
-        <Text align={"center"}>{props.description}</Text>
+    <Button w={"100%"} h={"100%"} py={2}>
+      <Stack spacing={2}>
+        <Text align={"center"} fontSize={40}>
+          {props.emoji}
+        </Text>
+        <Text align={"center"} fontSize={12}>
+          {props.title}
+        </Text>
       </Stack>
-    </Box>
+    </Button>
   )
 }

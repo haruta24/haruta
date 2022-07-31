@@ -8,47 +8,47 @@ const Home = () => {
     {
       href: "/apps/click",
       title: "クリック",
-      description: "クリックするとカウントが増える",
+      emoji: "🪬",
     },
     {
       href: "/apps/clock",
       title: "時計",
-      description: "時刻を表示する",
+      emoji: "⏰",
     },
     {
       href: "/apps/text",
       title: "入力",
-      description: "文字を入力する",
+      emoji: "✒️",
     },
     {
       href: "/apps/nanoid",
       title: "NaN0-1D",
-      description: "nanoidを表示する",
+      emoji: "🔑",
     },
     {
       href: "/apps/aaa",
       title: "間違い探し",
-      description: "違う漢字を見つける",
+      emoji: "🔍",
     },
     {
       href: "/apps/dice",
       title: "サイコロ",
-      description: "サイコロを振る",
+      emoji: "🎲",
     },
     {
       href: "/apps/vocaloid",
       title: "ボカロ",
-      description: "🎧",
+      emoji: "🎧",
     },
     {
       href: "/apps/min2sec",
       title: "分から秒",
-      description: "",
+      emoji: "🕛",
     },
     {
       href: "/apps/caculator",
       title: "電卓",
-      description: "数字の計算ができる",
+      emoji: "🧮",
     },
   ]
 
@@ -58,11 +58,11 @@ const Home = () => {
         <title>{"ハルタ"}</title>
       </Head>
       <Stack as={"main"} px={4} pb={4} spacing={4} color={"black"}>
-        <SimpleGrid minChildWidth={"350px"} spacing={4}>
+        <SimpleGrid minChildWidth={"6rem"} spacing={4}>
           {apps.map((app) => (
             <Link href={app.href} key={app.href}>
               <a>
-                <BoxCardApp title={app.title} description={app.description} />
+                <BoxCardApp title={app.title} emoji={app.emoji} />
               </a>
             </Link>
           ))}
