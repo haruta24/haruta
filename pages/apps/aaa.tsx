@@ -1,5 +1,6 @@
 import { Box, Button, Center, Grid, HStack } from "@chakra-ui/react"
 import Head from "next/head"
+import { confetti, variation } from "party-js"
 import React, { FunctionComponent, useState } from "react"
 
 // ReactがAaaAppを呼び出している
@@ -38,7 +39,16 @@ const AaaApp: FunctionComponent = () => {
         <Box w={"md"} h={"md"}>
           <Grid templateColumns="repeat(8, 1fr)" gap={2} h={"100%"}>
             {texts.map((text, index) => (
-              <Button key={index} h={"100%"}>
+              <Button
+                key={index}
+                h={"100%"}
+                onClick={(event) => {
+                  if (index !== answer) return
+                  confetti(event.currentTarget, {
+                    count: variation.range(20, 40),
+                  })
+                }}
+              >
                 {text}
               </Button>
             ))}
