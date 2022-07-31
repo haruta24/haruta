@@ -7,7 +7,7 @@ const ClockApp: FunctionComponent = () => {
   const sec = text * 60
 
   return (
-    <HStack>
+    <HStack justifyContent={"center"}>
       <Input
         maxW={16}
         value={text}
