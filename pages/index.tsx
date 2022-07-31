@@ -26,7 +26,7 @@ const Home = () => {
       emoji: "🔑",
     },
     {
-      href: "/apps/aaa",
+      href: "/apps/gestalt",
       title: "間違い探し",
       emoji: "🔍",
     },
