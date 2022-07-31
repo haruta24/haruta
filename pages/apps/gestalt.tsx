@@ -7,16 +7,18 @@ import React, { FunctionComponent, useState } from "react"
 const AaaApp: FunctionComponent = () => {
   const patterns = [
     ["侍", "待"],
-    ["ね", "れ"],
-    ["め", "ぬ"],
+    ["科", "料"],
+    ["干", "于"],
+    ["夂", "夊"],
+    ["子", "孑"],
   ]
 
   const [pattern, setPattern] = useState(() => {
-    return patterns[Math.floor(Math.random() * patterns.length)]
+    return patterns[0] //patterns[Math.floor(Math.random() * patterns.length)]
   })
 
   const [answerIndex, setAnswerIndex] = useState(() => {
-    return Math.floor(Math.random() * 64)
+    return 8 // Math.floor(Math.random() * 64)
   })
 
   const [first, second] = pattern
@@ -59,6 +61,10 @@ const AaaApp: FunctionComponent = () => {
                     confetti(event.currentTarget, {
                       count: variation.range(20, 40),
                     })
+                    setPattern(
+                      patterns[Math.floor(Math.random() * patterns.length)],
+                    )
+                    setAnswerIndex(Math.floor(Math.random() * 64))
                   }}
                 >
                   {text}
