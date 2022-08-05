@@ -1,6 +1,7 @@
 import { SimpleGrid, Stack } from "@chakra-ui/react"
 import Head from "next/head"
 import Link from "next/link"
+import * as THREE from "three"
 import { BoxCardApp } from "../app/components/BoxCardApp"
 
 const Home = () => {
@@ -50,7 +51,14 @@ const Home = () => {
       title: "電卓",
       emoji: "🧮",
     },
+    {
+      href: "/apps/cube",
+      title: "キューブが回る",
+      emoji: "🔄",
+    },
   ]
+
+  console.log(THREE)
 
   return (
     <>
