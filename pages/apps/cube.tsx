@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     // サイズ
     const sizes = {
       width: innerWidth,
-      height: innerHeight,
+      height: innerWidth,
     }
 
     // カメラ
@@ -65,6 +65,7 @@ const Home: NextPage = () => {
 
     // ブラウザのリサイズ処理
     window.addEventListener("resize", () => {
+      console.log("resize")
       sizes.width = window.innerWidth
       sizes.height = window.innerHeight
       camera.aspect = sizes.width / sizes.height
