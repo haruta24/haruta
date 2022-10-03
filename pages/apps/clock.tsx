@@ -30,6 +30,13 @@ const ClockApp: FunctionComponent = () => {
       <Center>
         <Box px={12} fontSize={"7xl"}>
           <HStack>
+            <Text>{date.getFullYear()}</Text>
+            <Text>{"/"}</Text>
+            <Text>{date.getMonth() + 1}</Text>
+            <Text>{"/"}</Text>
+            <Text>{date.getDate()}</Text>
+          </HStack>
+          <HStack>
             <Text>{date.getHours()}</Text>
             <Text>{":"}</Text>
             <Text>{date.getMinutes()}</Text>
