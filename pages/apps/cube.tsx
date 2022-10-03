@@ -4,6 +4,7 @@ import * as THREE from "three"
 
 const Home: NextPage = () => {
   let canvas: HTMLElement
+
   useEffect(() => {
     if (canvas) return
     // canvasを取得
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
     // サイズ
     const sizes = {
       width: innerWidth,
-      height: innerWidth,
+      height: innerHeight - 72,
     }
 
     // カメラ
@@ -41,7 +42,7 @@ const Home: NextPage = () => {
       color: "#2497f0",
     })
     const box = new THREE.Mesh(boxGeometry, boxMaterial)
-    box.position.z = -5
+    box.position.z = -3
     box.rotation.set(10, 10, 10)
     scene.add(box)
 
@@ -67,13 +68,14 @@ const Home: NextPage = () => {
     window.addEventListener("resize", () => {
       console.log("resize")
       sizes.width = window.innerWidth
-      sizes.height = window.innerHeight
+      sizes.height = window.innerHeight - 72
       camera.aspect = sizes.width / sizes.height
       camera.updateProjectionMatrix()
       renderer.setSize(sizes.width, sizes.height)
       renderer.setPixelRatio(window.devicePixelRatio)
     })
   }, [])
+
   return (
     <>
       <canvas id="canvas"></canvas>

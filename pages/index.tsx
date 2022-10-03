@@ -1,9 +1,10 @@
 import { SimpleGrid, Stack } from "@chakra-ui/react"
+import { NextPage } from "next"
 import Head from "next/head"
 import Link from "next/link"
 import { BoxCardApp } from "../app/components/BoxCardApp"
 
-const Home = () => {
+const Home: NextPage = () => {
   const apps = [
     {
       href: "/apps/click",
