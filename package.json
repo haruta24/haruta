@@ -17,6 +17,7 @@
     "firebase": "9.9.1",
     "framer-motion": "^6",
     "next": "12.2.3",
+    "p5": "^1.4.2",
     "party-js": "^2.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,6 +26,7 @@
     "three": "^0.143.0"
   },
   "devDependencies": {
+    "@types/p5": "^1.4.3",
     "@types/react": "^18.0.15",
     "@types/three": "^0.143.0",
     "eslint": "8.17.0",

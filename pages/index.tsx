@@ -7,6 +7,11 @@ import { BoxCardApp } from "../app/components/BoxCardApp"
 const Home: NextPage = () => {
   const apps = [
     {
+      href: "/apps/sketch",
+      title: "お絵描き",
+      emoji: "🖌",
+    },
+    {
       href: "/apps/click",
       title: "クリック",
       emoji: "🪬",
