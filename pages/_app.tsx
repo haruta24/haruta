@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { getAnalytics, logEvent } from "firebase/analytics"
 import { getApps, initializeApp } from "firebase/app"
 import { AppProps } from "next/app"
+import Head from "next/head"
 import { useRouter } from "next/router"
 import { FunctionComponent, useEffect } from "react"
 import { BoxHeader } from "../app/components/BoxHeader"
@@ -51,10 +52,15 @@ const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
    * appに書いたらclick.js chonter.jsに<BoxHeader>書かなくていい
    */
   return (
-    <ChakraProvider>
-      <BoxHeader />
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <style>{"body { overscroll-behavior: none; }"}</style>
+      </Head>
+      <ChakraProvider>
+        <BoxHeader />
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   )
 }
 
