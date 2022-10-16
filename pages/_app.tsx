@@ -55,6 +55,7 @@ const MyApp: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
     <>
       <Head>
         <style>{"body { overscroll-behavior: none; }"}</style>
+        <style>{"canvas { touch-action: none; }"}</style>
       </Head>
       <ChakraProvider>
         <BoxHeader />
