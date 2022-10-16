@@ -8,10 +8,10 @@ const PageIndex: NextPage = () => {
 
 const sketch = (p: P5) => {
   p.setup = () => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight)
+    p.resizeCanvas(innerWidth, innerHeight - 72)
   }
   p.windowResized = () => {
-    p.resizeCanvas(window.innerWidth, window.innerHeight)
+    p.resizeCanvas(innerWidth, innerHeight - 72)
   }
   p.mouseDragged = () => {
     p.strokeWeight(4)
