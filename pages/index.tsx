@@ -42,11 +42,6 @@ const Home: NextPage = () => {
       emoji: "🎲",
     },
     {
-      href: "/apps/vocaloid",
-      title: "ボカロ",
-      emoji: "🎧",
-    },
-    {
       href: "/apps/min2sec",
       title: "分から秒",
       emoji: "🕛",
