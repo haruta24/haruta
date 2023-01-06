@@ -56,6 +56,11 @@ const Home: NextPage = () => {
       title: "キューブが回る",
       emoji: "🔄",
     },
+    {
+      href: "/apps/board",
+      title: "匿名掲示板",
+      emoji: "",
+    },
   ]
 
   return (
