@@ -16,7 +16,7 @@ const CounterApp: FunctionComponent = () => {
           <Card>
             <CardBody>
               <Text>
-                View a summary of all your customers over the last month.
+                {"View a summary of all your customers over the last month."}
               </Text>
             </CardBody>
           </Card>
