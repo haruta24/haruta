@@ -3,7 +3,6 @@ import {
   Button,
   Card,
   CardBody,
-  Heading,
   HStack,
   Input,
   Stack,
@@ -91,9 +90,7 @@ const CounterApp: FunctionComponent = () => {
             <CardBody>
               <Stack divider={<StackDivider />} spacing="4">
                 <Box>
-                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
-                    タイトル
-                  </Heading>
+                  <Input placeholder="タイトル" />
                 </Box>
                 <HStack justifyContent={"flex-end"}>
                   <Box>
