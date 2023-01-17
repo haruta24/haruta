@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardBody,
+  Heading,
   HStack,
   Input,
   Stack,
@@ -32,12 +33,17 @@ const CounterApp: FunctionComponent = () => {
                       {"2023/1/17"}
                     </Text>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"レス数 1"}
+                      {"レス数 2"}
                     </Text>
                   </HStack>
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
+                </Box>
+                <Box>
+                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
+                    コメントを追加
+                  </Heading>
                 </Box>
               </Stack>
             </CardBody>
@@ -61,6 +67,11 @@ const CounterApp: FunctionComponent = () => {
                     View a summary of all your clients over the last month.
                   </Text>
                 </Box>
+                <Box>
+                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
+                    コメントを追加
+                  </Heading>
+                </Box>
               </Stack>
             </CardBody>
           </Card>
@@ -73,12 +84,20 @@ const CounterApp: FunctionComponent = () => {
                       {"2023/1/17"}
                     </Text>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"レス数 1"}
+                      {"レス数 2"}
                     </Text>
                   </HStack>
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
+                </Box>
+                <Box>
+                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
+                    コメントを追加
+                  </Heading>
                 </Box>
               </Stack>
             </CardBody>
@@ -100,14 +119,6 @@ const CounterApp: FunctionComponent = () => {
               </Stack>
             </CardBody>
           </Card>
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
-          <Input placeholder="大きな体にふわふわの被毛が特徴的なラガマフィンの原産国はアメリカ。1994年に作出された比較的新しい猫種です。ここではラガマフィンの性格や体重、大きさ、毛色の種類などを解説します。なお、販売中のラガマフィンをお探しの方は子猫ブリーダーナビもご参考ください。" />
-          <Text>{"スレッド名"}</Text>
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
           <Text>{"リプ"}</Text>
           <Input placeholder="りぷ" />
           <Input placeholder="りぷ" />
