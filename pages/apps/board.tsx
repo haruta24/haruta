@@ -1,4 +1,13 @@
-import { Card, CardBody, Input, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Card,
+  CardBody,
+  HStack,
+  Input,
+  Stack,
+  StackDivider,
+  Text,
+} from "@chakra-ui/react"
 import { FunctionComponent } from "react"
 
 const CounterApp: FunctionComponent = () => {
@@ -15,32 +24,59 @@ const CounterApp: FunctionComponent = () => {
           <Text>{"新着タブ"}</Text>
           <Card>
             <CardBody>
-              <Text>
-                {"View a summary of all your customers over the last month."}
-              </Text>
+              <Stack divider={<StackDivider />} spacing="4">
+                <Box>
+                  <HStack justifyContent={"space-between"}>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"2023/1/17"}
+                    </Text>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"レス数 1"}
+                    </Text>
+                  </HStack>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
+                </Box>
+              </Stack>
             </CardBody>
           </Card>
           <Card>
             <CardBody>
-              <Text>
-                {"View a summary of all your customers over the last month."}
-              </Text>
+              <Stack divider={<StackDivider />} spacing="4">
+                <Box>
+                  <HStack justifyContent={"space-between"}>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"2023/1/17"}
+                    </Text>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"レス数 1"}
+                    </Text>
+                  </HStack>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
+                </Box>
+              </Stack>
             </CardBody>
           </Card>
           <Card>
             <CardBody>
-              <Text>
-                {
-                  "View a summary of all your customers over the last month.View a summary of all your customers over the last month.View a summary of all your customers over the last month.View a summary of all your customers over the last month."
-                }
-              </Text>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <Text>
-                {"View a summary of all your customers over the last month."}
-              </Text>
+              <Stack divider={<StackDivider />} spacing="4">
+                <Box>
+                  <HStack justifyContent={"space-between"}>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"2023/1/17"}
+                    </Text>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"レス数 1"}
+                    </Text>
+                  </HStack>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
+                </Box>
+              </Stack>
             </CardBody>
           </Card>
         </Stack>
