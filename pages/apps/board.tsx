@@ -1,7 +1,9 @@
 import {
   Box,
+  Button,
   Card,
   CardBody,
+  Heading,
   HStack,
   Input,
   Stack,
@@ -50,9 +52,12 @@ const CounterApp: FunctionComponent = () => {
                       {"2023/1/17"}
                     </Text>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"レス数 1"}
+                      {"レス数 2"}
                     </Text>
                   </HStack>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
@@ -82,6 +87,22 @@ const CounterApp: FunctionComponent = () => {
         </Stack>
         <Stack flex={1}>
           <Text>{"スレッド作成"}</Text>
+          <Card>
+            <CardBody>
+              <Stack divider={<StackDivider />} spacing="4">
+                <Box>
+                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
+                    タイトル
+                  </Heading>
+                </Box>
+                <HStack justifyContent={"flex-end"}>
+                  <Box>
+                    <Button colorScheme="blue">新規スレッド作成</Button>
+                  </Box>
+                </HStack>
+              </Stack>
+            </CardBody>
+          </Card>
           <Input placeholder="スレッド名" />
           <Input placeholder="スレッド名" />
           <Input placeholder="スレッド名" />
