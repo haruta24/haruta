@@ -3,7 +3,6 @@ import {
   Button,
   Card,
   CardBody,
-  Heading,
   HStack,
   Input,
   Stack,
@@ -33,7 +32,7 @@ const CounterApp: FunctionComponent = () => {
                       {"2023/1/17"}
                     </Text>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"レス数 2"}
+                      {"レス数 1"}
                     </Text>
                   </HStack>
                   <Text pt="2" fontSize="lg">
@@ -41,9 +40,7 @@ const CounterApp: FunctionComponent = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
-                    コメントを追加
-                  </Heading>
+                  <Input placeholder="コメントを追加" />
                 </Box>
               </Stack>
             </CardBody>
@@ -68,9 +65,7 @@ const CounterApp: FunctionComponent = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
-                    コメントを追加
-                  </Heading>
+                  <Input placeholder="コメントを追加" />
                 </Box>
               </Stack>
             </CardBody>
@@ -95,9 +90,7 @@ const CounterApp: FunctionComponent = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Heading size="xs" textTransform="uppercase" opacity={0.6}>
-                    コメントを追加
-                  </Heading>
+                  <Input placeholder="コメントを追加" />
                 </Box>
               </Stack>
             </CardBody>
