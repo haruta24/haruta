@@ -124,17 +124,16 @@ const CounterApp: FunctionComponent = () => {
           </Card>
         </Stack>
         <Stack flex={1}>
-          <Text>{"スレッド作成"}</Text>
           <Card>
+            <Heading size="xs" padding={4}>
+              新しいスレッド
+            </Heading>
             <CardBody>
-              <Stack divider={<StackDivider />} spacing="4">
-                <Box>
-                  <Input placeholder="タイトル" />
-                </Box>
+              <Stack>
+                <Input placeholder="タイトル" />
+                <Input placeholder="内容" />
                 <HStack justifyContent={"flex-end"}>
-                  <Box>
-                    <Button colorScheme="blue">新規スレッド作成</Button>
-                  </Box>
+                  <Button colorScheme="blue">作成</Button>
                 </HStack>
               </Stack>
             </CardBody>
