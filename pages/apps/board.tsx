@@ -3,6 +3,7 @@ import {
   Button,
   Card,
   CardBody,
+  Heading,
   HStack,
   Input,
   Stack,
@@ -35,6 +36,49 @@ const CounterApp: FunctionComponent = () => {
                       {"レス数 1"}
                     </Text>
                   </HStack>
+                  <Stack>
+                    <Heading
+                      size="xs"
+                      textTransform="uppercase"
+                      paddingTop={2}
+                      paddingBottom={2}
+                    >
+                      タイトル
+                    </Heading>
+                    <Text pt="2" fontSize="lg">
+                      View a summary of all your clients over the last month.
+                    </Text>
+                  </Stack>
+                </Box>
+                <Box>
+                  <Input placeholder="コメントを追加" />
+                </Box>
+              </Stack>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardBody>
+              <Stack divider={<StackDivider />} spacing="4">
+                <Box>
+                  <HStack justifyContent={"space-between"}>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"2023/1/17"}
+                    </Text>
+                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
+                      {"レス数 2"}
+                    </Text>
+                  </HStack>
+                  <Heading
+                    size="xs"
+                    textTransform="uppercase"
+                    paddingTop={2}
+                    paddingBottom={2}
+                  >
+                    タイトル
+                  </Heading>
+                  <Text pt="2" fontSize="lg">
+                    View a summary of all your clients over the last month.
+                  </Text>
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
@@ -57,31 +101,14 @@ const CounterApp: FunctionComponent = () => {
                       {"レス数 2"}
                     </Text>
                   </HStack>
-                  <Text pt="2" fontSize="lg">
-                    View a summary of all your clients over the last month.
-                  </Text>
-                  <Text pt="2" fontSize="lg">
-                    View a summary of all your clients over the last month.
-                  </Text>
-                </Box>
-                <Box>
-                  <Input placeholder="コメントを追加" />
-                </Box>
-              </Stack>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <Stack divider={<StackDivider />} spacing="4">
-                <Box>
-                  <HStack justifyContent={"space-between"}>
-                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"2023/1/17"}
-                    </Text>
-                    <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"レス数 2"}
-                    </Text>
-                  </HStack>
+                  <Heading
+                    size="xs"
+                    textTransform="uppercase"
+                    paddingTop={2}
+                    paddingBottom={2}
+                  >
+                    タイトル
+                  </Heading>
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
