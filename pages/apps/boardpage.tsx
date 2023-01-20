@@ -17,7 +17,7 @@ const BoardApp: FunctionComponent = () => {
   return (
     <Stack p={4}>
       <Text w={"100%"}>{"匿名掲示板"}</Text>
-      <Text>{"スレッド詳細ページ"}</Text>
+      <Text>{"スレッド詳細"}</Text>
       <Card>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
