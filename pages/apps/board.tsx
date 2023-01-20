@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { FunctionComponent } from "react"
 
-const CounterApp: FunctionComponent = () => {
+const BoardApp: FunctionComponent = () => {
   return (
     <Stack p={4}>
       <Text w={"100%"}>{"匿名掲示板"}</Text>
@@ -138,19 +138,10 @@ const CounterApp: FunctionComponent = () => {
               </Stack>
             </CardBody>
           </Card>
-          <Text>{"リプ"}</Text>
-          <Input placeholder="りぷ" />
-          <Input placeholder="りぷ" />
-          <Input placeholder="りぷ" />
-          <Input placeholder="りぷ" />
-          <Text>{"過去スレッド"}</Text>
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
-          <Input placeholder="スレッド名" />
         </Stack>
       </Stack>
     </Stack>
   )
 }
 
-export default CounterApp
+export default BoardApp
