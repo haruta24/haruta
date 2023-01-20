@@ -58,6 +58,7 @@ const BoardApp: FunctionComponent = () => {
       <HStack>
         <Card>
           <CardBody>
+            <Text>{"1"}</Text>
             <Text>ありがとう</Text>
           </CardBody>
         </Card>
@@ -65,6 +66,7 @@ const BoardApp: FunctionComponent = () => {
       <HStack>
         <Card>
           <CardBody>
+            <Text>{"2"}</Text>
             <Text>ありがとう</Text>
           </CardBody>
         </Card>
@@ -72,6 +74,7 @@ const BoardApp: FunctionComponent = () => {
       <HStack>
         <Card>
           <CardBody>
+            <Text>{"3"}</Text>
             <Text>ありがとう</Text>
           </CardBody>
         </Card>
