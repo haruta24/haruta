@@ -28,11 +28,14 @@ const BoardApp: FunctionComponent = () => {
           <Text>{"新着タブ"}</Text>
           <Card>
             <CardBody>
+              <Text fontSize="sm" textTransform="uppercase">
+                {"HIT数 9"}
+              </Text>
               <Stack divider={<StackDivider />} spacing="4">
                 <Box>
                   <HStack justifyContent={"space-between"}>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
-                      {"2023/1/17"}
+                      {"7日前(2023/1/17)"}
                     </Text>
                     <Text fontSize="sm" textTransform="uppercase" opacity={0.6}>
                       {"レス数 1"}
@@ -90,6 +93,14 @@ const BoardApp: FunctionComponent = () => {
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
+                  <Stack>
+                    <Link href={`/apps/board/aa`}>
+                      <Button colorScheme="blue">{"スレッド詳細"}</Button>
+                    </Link>
+                    <Button colorScheme="blue" leftIcon={<AiFillLike />}>
+                      {"いいねボタン"}
+                    </Button>
+                  </Stack>
                 </Box>
                 <Box>
                   <Input placeholder="コメントを追加" />
@@ -123,6 +134,14 @@ const BoardApp: FunctionComponent = () => {
                   <Text pt="2" fontSize="lg">
                     View a summary of all your clients over the last month.
                   </Text>
+                  <Stack>
+                    <Link href={`/apps/board/aa`}>
+                      <Button colorScheme="blue">{"スレッド詳細"}</Button>
+                    </Link>
+                    <Button colorScheme="blue" leftIcon={<AiFillLike />}>
+                      {"いいねボタン"}
+                    </Button>
+                  </Stack>
                 </Box>
                 <Box>
                   <Input placeholder="コメントを追加" />
