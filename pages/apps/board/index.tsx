@@ -10,7 +10,9 @@ import {
   StackDivider,
   Text,
 } from "@chakra-ui/react"
+import Link from "next/link"
 import { FunctionComponent } from "react"
+import { AiFillLike } from "react-icons/ai"
 
 const BoardApp: FunctionComponent = () => {
   return (
@@ -48,6 +50,12 @@ const BoardApp: FunctionComponent = () => {
                     <Text pt="2" fontSize="lg">
                       View a summary of all your clients over the last month.
                     </Text>
+                    <Link href={`/apps/board/aa`}>
+                      <Button colorScheme="blue">{"スレッド詳細"}</Button>
+                    </Link>
+                    <Button colorScheme="blue" leftIcon={<AiFillLike />}>
+                      {"いいねボタン"}
+                    </Button>
                   </Stack>
                 </Box>
                 <Box>
